@@ -14,23 +14,47 @@ const info = document.querySelector('.pokemon-info')
 
 // ======================= with the help of npm package ============================
 const interval = {
-  offset: 0,
+  offset: -1,
   limit: 3,
 }
 
-P.getPokemonsList(interval).then((response) =>
-{ 
+const image_value = async(url,div) =>{
+      const response = await fetch(url,{
+  method :'GET',
+   header : {
+     "Content-type": "application/json; charset=UTF-8"
+   }
+});
+       console.log(url)
+       const json =  await response.json()
+       console.log(json)
+       const image =  await json.sprites.front_default
+       const img = document.createElement('img')
+       img.src = `${image}`
+       div.append(img)
+}
 
- const data = response.results;
+const callingApi = async() =>{
+ const response = await P.getPokemonsList(interval)
+ const data = await response.results;
  console.log(data)
  data.map((data)=>{
        const div = document.createElement('div')
        const h4 =  document.createElement('h4')
-       const img = document.createElement('img')
-       const para = document.createElement('p')
+
+       image_value(data.url,div)
+    //    const para = document.createElement('p')
        h4.textContent = data.name
+       
        div.append(h4)
        info.append(div)
- })
 })
+}
+
+
+
+// setInterval(() => {
+//      interval.offset += 1;
+//     callingApi();
+// }, 2000);
 
