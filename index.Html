@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Link rel="stylesheet" href="utilities.css" />
     <Link rel="stylesheet" href="style.css" />
 
 
@@ -12,117 +13,124 @@
 </head>
 
 <body>
-    =====================================navbar===================================
-    <nav>
-        <header>
-            <h1>POKEZOO</h1>
+    <!-- =====================================navbar=================================== -->
+    <nav class="navbar">
+        <header class="container flex">
+            <h3 class="logo">POKEZOO</h3>
+            <div>
+                <ul>
+                    <li><a href="#">our Rules</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Buy Tickets</a></li>
+                </ul>
+            </div>
+            <Button>Start your journey</Button>
         </header>
-        <div>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">our Rules</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Buy Tickets</a></li>
-            </ul>
-        </div>
-        <Button>Start your journey</Button>
+
     </nav>
 
-    ==================================== section ===============================
-    <section>
-        <div>
+    <!-- ==================================== section =============================== -->
+    <section class="first-section ">
+        <div class="container grid">
             <div>
-                <h1>WELCOME TO POKEZOO</h1>
+                <div>
+                    <h1>WELCOME TO POKEZOO</h1>
+                    <p>
+                        You can find your fav pokemon here.
+                        They will show your abilities and
+                        keep you company throughout your journey.
+                    </p>
+                </div>
             </div>
+
             <div>
-                <p>
-                    You can find your fav pokemon here.
-                    They will show your abilities and
-                    keep you company throughout your journey.
-                </p>
+                <div>
+                    <img src="https://c.tenor.com/st-H1KdsEHoAAAAj/pokemon.gif" alt="pokemon" />
+                </div>
             </div>
         </div>
+    </section>
 
-        <div>
+    <!-- ======================= mission =========================== -->
+    <section class="box-section">
+        <div class="container flex">
             <div>
                 <img src="https://c.tenor.com/st-H1KdsEHoAAAAj/pokemon.gif" alt="pokemon" />
             </div>
-        </div>
-    </section>
-
-    ======================= mission ===========================
-    <section>
-        <div>
-            <img src="https://c.tenor.com/st-H1KdsEHoAAAAj/pokemon.gif" alt="pokemon" />
-        </div>
-        <div>
-            <h1>our mission</h1>
-            <p>Connecting people with pokemons and nature</p>
-        </div>
-    </section>
-
-    ====================== Ticket =============================
-
-    <section>
-        <div>
-            <h1>Your Adventure starts here...</h1>
-            <h4>Buy your ticket</h4>
-            <ul>
-                <li>Get close to your fav pokemon,</li>
-                <li>Experience new level your happiness,</li>
-                <li>Meet experienced trainer,</li>
-                <li>Learn from them</li>
-            </ul>
-        </div>
-
-        <div>
-            <input type="text" value="1" name="name" />
-            <Button>+</Button>
             <div>
-                <p>$10</p>
-                <Button type="submit">Get your ticket</Button>
+                <h1>our mission</h1>
+                <p>Connecting people with pokemons and nature</p>
             </div>
+    </section>
+
+    <!-- ====================== Ticket ============================= -->
+
+    <section class="ticket-section">
+        <div class="container grid">
+            <div>
+                <h1>Your Adventure starts here...</h1>
+                <h4>Buy your ticket</h4>
+                <ul>
+                    <li>Get close to your fav pokemon,</li>
+                    <li>Experience new level your happiness,</li>
+                    <li>Meet experienced trainer,</li>
+                    <li>Learn from them</li>
+                </ul>
+            </div>
+
+            <form class="card">
+                <input type="text" value="1" name="name" />
+                <Button>+</Button>
+                <div>
+                    <p>$10</p>
+                    <Button type="submit">Get your ticket</Button>
+                </div>
+            </form>
         </div>
     </section>
 
-    ============================= slider =============================
+    <!-- ============================= slider ============================= -->
 
-    <section>
+    <section class="slider">
         <h1>Your fav Pokemon</h1>
-        <section class="pokemon-info">
+        <div class="pokemon-info grid container">
 
-        </section>
+        </div>
     </section>
 
-    ============================= Rules =============================
+    <!-- ============================= Rules ============================= -->
 
-    <section>
-        <div>
+    <section class="box-section quotes">
+        <div class="container flex">
             <h1>Our Rules</h1>
-            <h5>Officer Jenny</h5>
             <p>"You are not allowed to harm any pokemon or
                 you cant leave from officer Jenny s Hand"
             </p>
-            <h5>Nurse Joy</h5>
-            <p>Please be gentle with pokemons,
+            <h5>-Officer Jenny</h5>
+            <p>"Please be gentle with pokemons,
                 if you feel anyone is unhealthy,
-                inform the department right way
+                inform the department right way"
             </p>
+            <h5>-Nurse Joy</h5>
         </div>
     </section>
-    ============================= Footer ==========================
+
+    <!-- ============================= Footer ========================== -->
     <Footer>
-        <div>
-            <h4>POKEZOO</h4>
-            <p>Tour with us , meet your fav pokemon</p>
-        </div>
-        <div>
-            <ul>
-                <li>our rules</li>
-                <li>About us</li>
-                <li>Contact</Li>
-                <li>Buy Tickets</li>
-            </ul>
+        <div class="flex">
+            <div>
+                <h4>POKEZOO</h4>
+                <p>Tour with us , meet your fav pokemon</p>
+            </div>
+            <div>
+                <ul class="flex">
+                    <li>our rules</li>
+                    <li>About us</li>
+                    <li>Contact</Li>
+                    <li>Buy Tickets</li>
+                </ul>
+            </div>
         </div>
     </Footer>
 

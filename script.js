@@ -14,7 +14,7 @@ const info = document.querySelector('.pokemon-info')
 
 // ======================= with the help of npm package ============================
 const interval = {
-  offset: -1,
+  offset: 0,
   limit: 3,
 }
 
@@ -41,7 +41,7 @@ const callingApi = async() =>{
  data.map((data)=>{
        const div = document.createElement('div')
        const h4 =  document.createElement('h4')
-
+       div.classList.add('card'); 
        image_value(data.url,div)
     //    const para = document.createElement('p')
        h4.textContent = data.name
@@ -54,7 +54,7 @@ const callingApi = async() =>{
 
 
 // setInterval(() => {
-//      interval.offset += 1;
 //     callingApi();
+//     interval.offset += 3;
 // }, 2000);
 
