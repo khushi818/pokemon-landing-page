@@ -177,6 +177,7 @@ section h1 {
     max-width: 1100px;
     padding: 40px;
     margin: 0 auto;
+    margin-top: 24rem;
 }
 
 /* slider */
@@ -198,11 +199,29 @@ section h1 {
     color: var(--white);
 }
 
+.fav-poke {
+    display: block;
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+.slider {
+    position: relative;
+}
+
 .slider .grid {
-    grid-template-columns: 33% 33% 33%;
+
+    max-width: 700px;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    overflow: hidden;
+    max-height: 100vh;
+
+}
+
+.slider .card {
+    position: absolute;
+    z-index: 1;
+    transition: all 1s linear;
 }
 
 Footer {
