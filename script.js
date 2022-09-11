@@ -1,10 +1,42 @@
 const prev = 0;
+const plus_btn =  document.querySelector('.plus')
+const form = document.querySelector('.form')
 const info = document.querySelector('.pokemon-info')
 const btn_next = document.querySelector('.next-slide')
-const b1 = document.querySelector('.block1');
-const b2 = document.querySelector('.block2');
-const b3 = document.querySelector('.block3')
-const block = document.querySelectorAll('block3')
+const event_model = document.querySelector('.EventModel')
+const submit = document.querySelector('.submit')
+const P = new Pokedex.Pokedex()
+const swup = new Swup();
+
+
+/* ticket form */
+
+plus_btn.addEventListener('click',()=>{
+    let val = Number(form.querySelector('input').value);
+    val += 1; 
+    form.querySelector('input').value = val;
+    form.querySelector('.money').textContent =`$${form.querySelector('input').value*10}`
+})
+
+form.querySelector('input').addEventListener('keydown',()=>{
+   form.querySelector('.money').innerHTML =`$${Number(form.querySelector('input').value)*10}`
+})
+
+submit.addEventListener('click',()=>{
+     if(event_model.classList.contains('hidden') && form.querySelector('input').value !== '')
+     {
+     event_model.classList.remove('hidden')
+     }
+     else
+     {
+      event_model.classList.add('hidden')
+     }       
+})
+
+event_model.addEventListener('mousedown',()=>{
+   event_model.classList.add('hidden')
+})
+
 // =========================== one method by using fetch ===========================
 
 // fetch(
@@ -115,13 +147,12 @@ function spliceChildNodes(parent, start, deleteCount /*[, newNode1, newNode2]*/)
 //setInterval(() => {
   
  
-setInterval(()=>{
-   btn_next.click();
-   setTimeout(()=>{
-   spliceChildNodes(info,1,3)
-   },3000)
-},3000)
+// setInterval(()=>{
+//    btn_next.click();
+//    setTimeout(()=>{
+//    spliceChildNodes(info,1,3)
+//    },3000)
+// },3000)
 
 // }, 1000);
-
 

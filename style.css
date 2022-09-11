@@ -18,11 +18,24 @@
     padding: 0;
 }
 
+.transition-fade {
+    transition: 1s;
+    opacity: 1;
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+
 body {
     font-family: 'lato', sans-serif;
     color: #333;
     line-height: 1.6;
     background-color: var(--purple);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 ul {
@@ -221,6 +234,8 @@ section h1 {
     scroll-behavior: smooth;
 }
 
+
+
 .card-list {
     width: 100%;
     display: flex;
@@ -236,6 +251,48 @@ section h1 {
     width: 100%;
     padding: 100px;
 }
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.EventModel {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.EventModel::before {
+    content: '';
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.EventModel .model-box {
+    background-color: white;
+    width: 70%;
+    padding: 100px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+
 
 Footer {
     padding: 30px;

@@ -16,7 +16,9 @@
     <!-- =====================================navbar=================================== -->
     <nav class="navbar">
         <header class="container flex">
-            <h3 class="logo">POKEZOO</h3>
+            <a href="/index.html">
+                <h3 class="logo">POKEZOO</h3>
+            </a>
             <div>
                 <ul>
                     <li><a href="#">our Rules</a></li>
@@ -31,25 +33,27 @@
     </nav>
 
     <!-- ==================================== section =============================== -->
-    <section class="first-section ">
-        <div class="container grid">
-            <div>
+    <section id="first-section" class="first-section">
+        <main id="swup" class="transition-fade">
+            <div class="container grid">
                 <div>
-                    <h1>WELCOME TO POKEZOO</h1>
-                    <p>
-                        You can find your fav pokemon here.
-                        They will show your abilities and
-                        keep you company throughout your journey.
-                    </p>
+                    <div>
+                        <h1>WELCOME TO POKEZOO</h1>
+                        <p>
+                            You can find your fav pokemon here.
+                            They will show your abilities and
+                            keep you company throughout your journey.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div>
                 <div>
-                    <img src="https://c.tenor.com/st-H1KdsEHoAAAAj/pokemon.gif" alt="pokemon" />
+                    <div>
+                        <img src="https://c.tenor.com/st-H1KdsEHoAAAAj/pokemon.gif" alt="pokemon" />
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
     </section>
 
     <!-- ======================= mission =========================== -->
@@ -79,14 +83,22 @@
                 </ul>
             </div>
 
-            <form class="card">
+            <div class="card form">
                 <input type="text" value="1" name="name" />
-                <Button>+</Button>
+                <Button class="plus">+</Button>
                 <div>
-                    <p>$10</p>
-                    <Button type="submit">Get your ticket</Button>
+                    <p class="money">$10</p>
+                    <Button type="submit" class="submit">Get your ticket</Button>
                 </div>
-            </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================Event Model =========================-->
+
+    <section class="EventModel hidden">
+        <div class="model-box">
+            <h1>Your ticket is booked🎊</h1>
         </div>
     </section>
 
@@ -139,13 +151,16 @@
         </div>
     </Footer>
 
-    <script src="./node_modules/pokeapi-js-wrapper/dist/index.js"></script>
-    <script>
-        const P = new Pokedex.Pokedex()
-    </script>
-    <script src="script.js" defer>
 
-    </script>
 </body>
+<script src="./node_modules/swup/dist/swup.min.js"></script>
+<!-- <script>
+    // const swup = new Swup();
+</script> -->
+<script src="./node_modules/pokeapi-js-wrapper/dist/index.js"></script>
+<!-- <script>
+    // const P = new Pokedex.Pokedex()
+</script> -->
+<script src="script.js" defer></script>
 
 </html>
