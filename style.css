@@ -4,6 +4,11 @@
     --purple: #659DBD;
     --blue: #1098F7;
     --pink: #BD4089;
+
+    --card-width: 200px;
+    --card-height: 300px;
+    --card-transition-duration: 800ms;
+    --card-transition-easing: ease;
 }
 
 * {
@@ -200,28 +205,36 @@ section h1 {
 }
 
 .fav-poke {
+    text-align: center;
     display: block;
-    max-height: 100vh;
     max-width: 100%;
 }
 
-.slider {
-    position: relative;
+.fav-poke h1 {
+    font-size: 48px;
+    margin-bottom: 8rem;
 }
 
-.slider .grid {
-
-    max-width: 700px;
+.slider {
+    min-width: 100%;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    max-height: 100vh;
-
 }
 
-.slider .card {
-    position: absolute;
-    z-index: 1;
-    transition: all 1s linear;
+.card-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokemon-info {
+    transition: all 1s ease-in-out;
+}
+
+.pokemon-info .card {
+    width: 100%;
+    padding: 100px;
 }
 
 Footer {
