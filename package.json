@@ -2,15 +2,18 @@
   "name": "pokemon-landing-page",
   "version": "1.0.0",
   "description": "",
-  "main": "src/script.js",
+  "main": "script.js",
   "scripts": {
-    "start": "parcel index.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@swup/js-plugin": "^1.0.5",
     "pokeapi-js-wrapper": "^1.2.2",
-    "scroll-out": "^2.2.12"
+    "scroll-out": "^2.2.12",
+    "swup": "^2.0.19"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
   }
 }
