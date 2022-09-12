@@ -5,6 +5,11 @@ const info = document.querySelector('.pokemon-info')
 const btn_next = document.querySelector('.next-slide')
 const event_model = document.querySelector('.EventModel')
 const submit = document.querySelector('.submit')
+const ul = document.getElementById('list')
+const option = document.querySelector('.option')
+const menu = document.querySelector('.menu')
+const close = document.querySelector('.close')
+
 const P = new Pokedex.Pokedex()
 const swup = new Swup();
 
@@ -23,9 +28,14 @@ form.querySelector('input').addEventListener('keydown',()=>{
 })
 
 submit.addEventListener('click',()=>{
-     if(event_model.classList.contains('hidden') && form.querySelector('input').value !== '')
+     if(event_model.classList.contains('hidden')){
+      if(form.querySelector('input').value !== '')
      {
-     event_model.classList.remove('hidden')
+           event_model.classList.remove('hidden')
+     }
+     else{
+      alert('enter the number of tickets')
+     }
      }
      else
      {
@@ -37,6 +47,21 @@ event_model.addEventListener('mousedown',()=>{
    event_model.classList.add('hidden')
 })
 
+
+option.addEventListener('click',()=>{
+   if(menu.classList.contains('hidden'))
+   {
+      menu.classList.remove('hidden')
+      ul.style.top = '-800px';
+      close.classList.add('hidden')
+   }
+   else
+   {
+      menu.classList.add('hidden')
+      ul.style.top = '70px';
+      close.classList.remove('hidden')
+   }
+})
 // =========================== one method by using fetch ===========================
 
 // fetch(
@@ -70,12 +95,13 @@ const image_value = async(url,div) =>{
    header : {
      "Content-type": "application/json; charset=UTF-8"
    }
-});
+})
        console.log(url)
        const json =  await response.json()
        console.log(json)
        const image =  await json.sprites.front_default
        const img = document.createElement('img')
+       img.style.width = "70%";
        img.src = `${image}`
        div.append(img)
 }
@@ -90,7 +116,7 @@ const addDiv = (idx) => {
        div.dataset.idx = idx;
        image_value(pokemon_data[idx].url,div)
     //    const para = document.createElement('p')
-       h4.textContent = pokemon_data[idx].name
+       h4.textContent = pokemon_data[idx].name.toUpperCase()
        
        div.append(h4)
        info.append(div)
@@ -144,15 +170,10 @@ function spliceChildNodes(parent, start, deleteCount /*[, newNode1, newNode2]*/)
 }
 
 
-//setInterval(() => {
-  
- 
-// setInterval(()=>{
-//    btn_next.click();
-//    setTimeout(()=>{
-//    spliceChildNodes(info,1,3)
-//    },3000)
-// },3000)
-
-// }, 1000);
+setInterval(()=>{
+   btn_next.click();
+   setTimeout(()=>{
+   spliceChildNodes(info,1,3)
+   },3000)
+},3000)
 

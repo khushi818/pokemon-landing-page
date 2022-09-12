@@ -16,18 +16,26 @@
     <!-- =====================================navbar=================================== -->
     <nav class="navbar">
         <header class="container flex">
-            <a href="/index.html">
-                <h3 class="logo">POKEZOO</h3>
-            </a>
+            <div class="main flex">
+                <div>
+                    <a href="/index.html">
+                        <h3 class="logo">POKEZOO</h3>
+                    </a>
+                </div>
+                <div class="option visible hidden">
+                    <span class="menu">☰</span>
+                    <span class="close hidden">X</span>
+                </div>
+            </div>
             <div>
-                <ul>
+                <ul id='list'>
                     <li><a href="#">our Rules</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Buy Tickets</a></li>
                 </ul>
             </div>
-            <Button>Start your journey</Button>
+            <button>Start your journey</button>
         </header>
 
     </nav>
@@ -44,6 +52,7 @@
                             They will show your abilities and
                             keep you company throughout your journey.
                         </p>
+                        <button>Start your journey</button>
                     </div>
                 </div>
 
@@ -84,7 +93,7 @@
             </div>
 
             <div class="card form">
-                <input type="text" value="1" name="name" />
+                <input type="text" value="1" name="name" required />
                 <Button class="plus">+</Button>
                 <div>
                     <p class="money">$10</p>
@@ -103,19 +112,19 @@
     </section>
 
     <!-- ============================= slider ============================= -->
-    <div class="fav-poke">
+    <section class="fav-poke">
         <h1>Your fav Pokemon</h1>
-        <section class="slider">
+        <div class="slider">
             <div class="card-list">
                 <div class="prev-slide"></div>
-                <div class="pokemon-info container flex">
+                <div class="pokemon-info container grid grid-3">
 
                 </div>
                 <div class="next-slide"></div>
             </div>
 
-        </section>
-    </div>
+        </div>
+    </section>
     <!-- ============================= Rules ============================= -->
 
     <section class="box-section quotes">

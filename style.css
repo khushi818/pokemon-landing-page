@@ -1,7 +1,7 @@
 :root {
     --orange: #DAAD86;
     --white: #ffffff;
-    --purple: #659DBD;
+    --purple: #86B3DA;
     --blue: #1098F7;
     --pink: #BD4089;
 
@@ -62,15 +62,20 @@ img {
     width: 100%;
 }
 
+
+
 button {
     padding: 0.7rem 1rem;
     border-radius: 5px;
     color: var(--white);
     background: transparent;
     border: 1px solid var(--white);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
 /*navbar*/
+
 .navbar .flex {
     justify-content: space-between;
 }
@@ -80,6 +85,7 @@ button {
 }
 
 .navbar {
+    position: relative;
     background-color: var(--purple);
     color: #fff;
     height: 70px;
@@ -99,8 +105,9 @@ button {
 
 
 button:hover {
-    border-color: transparent;
-    border-bottom: 1px solid var(--white);
+    background-color: var(--blue);
+    color: var(--white);
+    border: 1px solid transparent;
 }
 
 input {
@@ -123,14 +130,16 @@ section h1 {
 }
 
 /*first section*/
-
 .first-section {
     position: relative;
     color: var(--black);
     background-color: var(--orange);
     transform: skewY(-3deg);
-    z-index: -1;
     height: 100%;
+}
+
+.first-section div {
+    z-index: 100;
 }
 
 .first-section .grid {
@@ -138,6 +147,24 @@ section h1 {
     grid-template-columns: 55% 45%;
     gap: 30px;
 }
+
+.first-section button {
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    color: black;
+    background: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.first-section button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
 
 /*mission*/
 
@@ -195,10 +222,8 @@ section h1 {
     max-width: 1100px;
     padding: 40px;
     margin: 0 auto;
-    margin-top: 24rem;
+    margin-top: 8rem;
 }
-
-/* slider */
 
 
 
@@ -217,6 +242,8 @@ section h1 {
     color: var(--white);
 }
 
+/*slider*/
+
 .fav-poke {
     text-align: center;
     display: block;
@@ -225,7 +252,6 @@ section h1 {
 
 .fav-poke h1 {
     font-size: 48px;
-    margin-bottom: 8rem;
 }
 
 .slider {
@@ -249,7 +275,7 @@ section h1 {
 
 .pokemon-info .card {
     width: 100%;
-    padding: 100px;
+    padding: 80px;
 }
 
 .card img {
@@ -288,9 +314,7 @@ section h1 {
     border-radius: 15px;
 }
 
-.hidden {
-    display: none;
-}
+
 
 
 
@@ -305,6 +329,145 @@ Footer .flex {
     justify-content: space-between;
 }
 
-ul {
+Footer ul {
     gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+    /* navbar */
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar .container {
+        padding: 0px;
+    }
+
+    .navbar .main {
+        justify-content: center;
+        flex-direction: row;
+        gap: 60vw;
+    }
+
+    .navbar .visible {
+        display: block;
+    }
+
+
+
+    .navbar ul {
+        position: absolute;
+        top: -400px;
+        left: 0;
+        padding: 50px;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        z-index: 2;
+        gap: 20px;
+        transition: all 0.8s ease-in-out;
+    }
+
+
+    .navbar Button {
+        display: none;
+    }
+
+
+
+    .navbar a {
+        color: #fff;
+        padding: 10px;
+        margin: 0 5px;
+    }
+
+    /*first-section*/
+
+    .first-section {
+        transform: skewY(0deg);
+    }
+
+    .first-section .grid {
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .first-section h1 {
+        font-size: 24px;
+    }
+
+    .first-section p {
+        font-size: 16px;
+        font-weight: 100;
+        padding: 0px 50px;
+    }
+
+    /*mission*/
+
+    .box-section {
+        margin: 50px;
+    }
+
+    .box-section .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box-section h1 {
+        font-size: 32px;
+    }
+
+    .box-section p {
+        font-size: 16px;
+    }
+
+    .ticket-section {
+        margin: 2rem;
+    }
+
+
+
+    .ticket-section .container {
+        grid-template-columns: 1fr;
+    }
+
+    input {
+        width: 40vw;
+    }
+
+    .EventModel .model-box {
+        width: 70%;
+        padding: 50px;
+        margin: 0 auto;
+    }
+
+    .EventModel h1 {
+        font-size: 24px;
+    }
+
+    .card-list .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .fav-poke h1 {
+        font-size: 32px;
+        margin-bottom: 0px;
+    }
+
+    /*footer*/
+    Footer .flex {
+        text-align: center;
+        flex-direction: column;
+        justify-content: left;
+    }
 }
