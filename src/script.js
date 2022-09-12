@@ -1,6 +1,6 @@
-// import { Pokedex } from 'pokeapi-js-wrapper'
+import { Pokedex } from 'pokeapi-js-wrapper'
 // import Swup from "@swup/js-plugin"
-// import {ScrollOut} from "../scroll-out"
+import ScrollOut from "../scroll-out"
 
 const prev = 0;
 const plus_btn =  document.querySelector('.plus')
@@ -14,7 +14,7 @@ const option = document.querySelector('.option')
 const menu = document.querySelector('.menu')
 const close = document.querySelector('.close')
 
-// const P = new Pokedex.Pokedex()
+const P = new Pokedex.Pokedex()
 // const swup = new Swup();
 
 ScrollOut({
