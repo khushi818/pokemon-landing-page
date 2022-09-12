@@ -13,6 +13,10 @@ const close = document.querySelector('.close')
 const P = new Pokedex.Pokedex()
 const swup = new Swup();
 
+ScrollOut({
+   targets:'h1,p'
+});
+
 
 /* ticket form */
 

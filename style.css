@@ -27,6 +27,7 @@ html.is-animating .transition-fade {
     opacity: 0;
 }
 
+
 body {
     font-family: 'lato', sans-serif;
     color: #333;
@@ -73,6 +74,28 @@ button {
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
+
+/* Animation */
+
+section .container h1,
+section .container p,
+footer .container p {
+    transition: 1s;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+section .container h1[data-scroll="in"],
+section .container p[data-scroll="in"],
+footer .container p[data-scroll="in"] {
+    transform: scaleX(1);
+}
+
+/* section .container h1[data-scroll="out"],
+section .container p[data-scroll="out"],
+footer .container p[data-scroll="out"] {
+    transform: scaleX(1);
+} */
 
 /*navbar*/
 
@@ -144,6 +167,9 @@ section h1 {
     height: 100%;
 }
 
+
+
+
 .first-section div {
     z-index: 100;
 }
@@ -186,6 +212,11 @@ section h1 {
 
 .mission {
     gap: 40px;
+}
+
+.types img {
+    width: 70%;
+    margin-right: 40%;
 }
 
 
@@ -452,6 +483,10 @@ Footer ul {
 
     .box-section p {
         font-size: 16px;
+    }
+
+    .types img {
+        margin-right: 0px;
     }
 
     .ticket-section {

@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "pokeapi-js-wrapper": "^1.2.2",
+    "scroll-out": "^2.2.12",
     "swup": "^2.0.19"
   }
 }
