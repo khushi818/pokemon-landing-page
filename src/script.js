@@ -14,7 +14,7 @@ const option = document.querySelector('.option')
 const menu = document.querySelector('.menu')
 const close = document.querySelector('.close')
 
-const P = new Pokedex.Pokedex()
+// const P = new Pokedex.Pokedex()
 // const swup = new Swup();
 
 ScrollOut({
