@@ -89,6 +89,8 @@ const callingApi = async() =>{
  console.log(pokemon_data);
 }
 
+callingApi();
+
 const image_value = async(url,div) =>{
       const response = await fetch(url,{
   method :'GET',
@@ -106,8 +108,24 @@ const image_value = async(url,div) =>{
        div.append(img)
 }
 
+const type_value  = async(url,div) =>{
+   const span = document.createElement('span')
+   const response = await fetch(url,{
+  method :'GET',
+   header : {
+     "Content-type": "application/json; charset=UTF-8"
+   }
+})
+   console.log(url)
+   const json = await response.json();
+   const type = await json.types[0].type.name
+   console.log(type)
+   span.textContent = type
+   setTimeout(()=>{
+   div.append(span)
+   },'200')
+} 
 
-callingApi();
 
 const addDiv = (idx) => {
        const div  = document.createElement('div');
@@ -116,8 +134,8 @@ const addDiv = (idx) => {
        div.dataset.idx = idx;
        image_value(pokemon_data[idx].url,div)
     //    const para = document.createElement('p')
+       type_value(pokemon_data[idx].url, div)
        h4.textContent = pokemon_data[idx].name.toUpperCase()
-       
        div.append(h4)
        info.append(div)
 }

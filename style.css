@@ -90,10 +90,12 @@ button {
     color: #fff;
     height: 70px;
     z-index: 100;
+    cursor: pointer;
 }
 
 .navbar ul {
     display: flex;
+
 }
 
 .navbar a {
@@ -118,6 +120,10 @@ input {
 
 input:focus {
     outline: none;
+}
+
+section {
+    display: block;
 }
 
 section p {
@@ -173,13 +179,19 @@ section h1 {
 }
 
 .box-section .flex {
-    background-color: rgba(2, 2, 9, 0.3);
-    justify-content: space-around;
+    text-align: right;
+    justify-content: space-between;
+
 }
+
+.mission {
+    gap: 40px;
+}
+
 
 /*ticket-section*/
 .ticket-section {
-    margin: 4rem;
+    margin: 2rem;
 }
 
 .ticket-section h1,
@@ -275,7 +287,12 @@ section h1 {
 
 .pokemon-info .card {
     width: 100%;
-    padding: 80px;
+    padding: 60px;
+    cursor: pointer;
+}
+
+.pokemon-info .card:hover {
+    padding: 50px;
 }
 
 .card img {
@@ -283,6 +300,12 @@ section h1 {
     object-fit: cover;
 }
 
+
+.pokemon-info .card span {
+    text-align: center;
+    margin: 4rem;
+    color: #ffffff;
+}
 
 .EventModel {
     position: fixed;
