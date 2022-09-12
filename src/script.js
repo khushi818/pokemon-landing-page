@@ -1,3 +1,7 @@
+// import { Pokedex } from 'pokeapi-js-wrapper'
+// import Swup from "@swup/js-plugin"
+// import {ScrollOut} from "../scroll-out"
+
 const prev = 0;
 const plus_btn =  document.querySelector('.plus')
 const form = document.querySelector('.form')
