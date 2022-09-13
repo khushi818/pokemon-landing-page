@@ -29,10 +29,10 @@
                 <ul id='list'>
                     <li><a href="/">Home</a></li>
                     <li><a href="./About.html">About us</a></li>
-                    <li><a href="#">Buy Tickets</a></li>
+                    <li><a href="#ticket-section">Buy Tickets</a></li>
                 </ul>
             </div>
-            <button>Start your journey</button>
+            <button><a href="#ticket-section">Start your journey</a></button>
         </header>
 
     </nav>
@@ -49,7 +49,7 @@
                         They will show your abilities and
                         keep you company throughout your journey.
                     </p>
-                    <button>Start your journey</button>
+                    <button><a href="#ticket-section">Start your journey</a></button>
                 </div>
             </div>
 
@@ -81,7 +81,7 @@
 
     <!-- ====================== Ticket ============================= -->
 
-    <section class="ticket-section">
+    <section id="ticket-section" class="ticket-section">
         <div class="container grid">
             <div>
                 <h1>Your Adventure starts here...</h1>
@@ -168,7 +168,7 @@
 <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 <script>
     ScrollOut({
-        targets: 'h1,p'
+        targets: 'h1,p,.form'
     });
 </script>
 

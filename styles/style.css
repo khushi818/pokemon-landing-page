@@ -80,14 +80,21 @@ button {
 section .container h1,
 section .container p,
 footer .container p {
-    transition: 1s;
+    transition: all 1s;
     transform: scaleX(0);
     transform-origin: left;
 }
 
+.form {
+    transition: all 1s;
+    transform: scaleX(0);
+    transform-origin: top;
+}
+
 section .container h1[data-scroll="in"],
 section .container p[data-scroll="in"],
-footer .container p[data-scroll="in"] {
+footer .container p[data-scroll="in"],
+.form[data-scroll="in"] {
     transform: scaleX(1);
 }
 
@@ -130,7 +137,7 @@ footer .container p[data-scroll="out"] {
 
 
 button:hover {
-    background-color: var(--blue);
+    background-color: var(--orange);
     color: var(--white);
     border: 1px solid transparent;
 }
