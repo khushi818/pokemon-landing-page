@@ -15,5 +15,9 @@ I learned how to use api effectively. Also, working with npm packages and learne
 
 # Challenges faced 
 
-Overall,It was fun project to work with. I faced problen while running npm packages at first but after asking my friends and seniors I eventually solved the issue.
+Overall,It was fun project to work with. I faced problem while running npm packages at first but after asking my friends and seniors I eventually solved the issue.
 
+
+[![pokemon-landing.png](https://i.postimg.cc/dQHDr9g5/pokemon-landing.png)](https://postimg.cc/pyj2tKWj)
+[![ticket-section.png](https://i.postimg.cc/zvCb1LJV/ticket-section.png)](https://postimg.cc/zHfXCGHr)
+[![model.png](https://i.postimg.cc/9Q84VHjt/model.png)](https://postimg.cc/qNKBXYqz)
